@@ -1,0 +1,220 @@
+
+   .h1 {
+    margin:150px auto;
+    display: table;
+    font-size: 26px;
+    padding: 40px 0px;
+    text-align: center;
+  }
+ 
+
+  .h1 span { font-weight: 500; }
+  
+  .header {
+    width: 100%;
+    display: table;
+    margin-bottom: 50px;
+  }
+  
+  #logo {
+    float: left;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 600;
+    padding: 20px 0px;
+  }
+  
+  .nav {
+    width: auto;
+    float: right;
+  }
+  
+  .nav ul {
+    display: table;
+    float: right;
+  }
+  
+  .nav ul li { float: left; }
+  
+  .nav ul li:last-child { padding-right: 0px; }
+  
+  .nav ul li a {
+    color: #000000;
+    font-size: 18px;
+    padding: 25px 20px;
+    display: inline-block;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .nav ul li a:hover {
+    color: #9b9b9b;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .nav ul li a:hover i {
+    color: #9b9b9b;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .nav ul li a i {
+    padding-right: 10px;
+    color: #002e5b;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .toggle-menu ul {
+    display: table;
+    width: 25px;
+  }
+  
+  .toggle-menu ul li {
+    width: 100%;
+    height: 3px;
+    background-color: #002e5b;
+    margin-bottom: 4px;
+  }
+  
+  .toggle-menu ul li:last-child { margin-bottom: 0px; }
+  
+  .input[type=checkbox], .label { display: none; }
+   @media only screen and (max-width: 1440px) {
+  
+  .section { max-width: 95%; }
+  }
+   @media only screen and (max-width: 980px) {
+  
+  .header { padding: 20px 0px; }
+  
+  #logo { padding: 0px; }
+  
+  .input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    background: none;
+  }
+  .input[type=checkbox]:fous {
+  background:none;
+  }
+  
+  .label {
+    float: right;
+    padding: 8px 0px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .input[type=checkbox]:checked ~ nav { display: block; }
+  
+  .nav {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 53px;
+    background-color: #000000;
+    padding: 0px;
+    z-index: 99;
+  }
+  
+  .nav ul { width: auto; }
+  
+  .nav ul li {
+    float: none;
+    padding: 0px;
+    width: 100%;
+    display: table;
+  }
+  
+  .nav ul li a {
+    color: #FFF;
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid rgba(225,225,225,0.1);
+  }
+  
+  .nav ul li a i {
+    color: #ffffff;
+    padding-right: 13px;
+  }
+  }
+   @media only screen and (max-width: 768px) {
+  
+    .h1 { padding: 25px 0px; }
+  
+    .h1 span { display: block; }
+    #logo{
+        padding: 0px 20px ;
+    }
+    .label { 
+        float: left;
+        margin-left: auto;
+        padding: 8px 20px;
+        display: inline-block;
+        cursor: pointer; }
+
+  }
+   @media only screen and (max-width: 480px) {
+  
+    .section { max-width: 90%; }
+  }
+   @media only screen and (max-width: 360px) {
+  
+    .h1 { font-size: 20px; }
+  
+    .label { padding: 5px 0px; }
+  
+  #logo { font-size: 20px; }
+  
+  .nav { top: 47px; }
+  }
+   @media only screen and (max-width: 320px) {
+  
+    .h1 { padding: 20px 0px; }
+  }
+
+.button{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  .button a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  .button a:before,
+  .button a:after{
+    position: absolute;
+    content: "Get Started";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #999089;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .button a:before{
+    color: #fff;
+    background: #999089;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .button a:after{
+    color: rgb(253, 253, 253);
+    background-color: #da8cff;
+    border: 5px solid #da8cff !important; 
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .button a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
